@@ -1,6 +1,6 @@
 # Sync Atom settings to a local folder
 
-![CI](https://github.com/UziTech/sync-settings-folder-location/workflows/CI/badge.svg)
+[![CI](https://github.com/UziTech/sync-settings-folder-location/workflows/CI/badge.svg)](https://github.com/UziTech/sync-settings-folder-location/actions)
 
 Synchronize settings, keymaps, user styles, init script, snippets and installed packages across [Atom](https://atom.io) instances to local folder.
 

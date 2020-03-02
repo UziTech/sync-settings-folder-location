@@ -15,4 +15,4 @@ This is a service package for [Sync-Settings](https://atom.io/packages/sync-sett
 3. Go To the Sync-Settings [settings page](atom://config/packages/sync-settings).
 4. Check `Use Other Backup Location`.
 5. Run command `sync-settings:create-backup` to create the backup location.
-5. Run command `sync-settings:backup` to backup your settings.
+6. Run command `sync-settings:backup` to backup your settings.

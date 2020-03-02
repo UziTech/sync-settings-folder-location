@@ -43,6 +43,42 @@ describe('folder', () => {
 		})
 	})
 
+	it('gets files in a directory', async () => {
+		const folderPath = atom.config.get('sync-settings-folder-location.folderPath')
+		const filePath = path.resolve(folderPath, './dir/test.txt')
+		await fs.outputFile(filePath, 'test')
+		const data = await folder.get()
+		expect(data.files).toEqual(jasmine.objectContaining({
+			'dir\\test.txt': jasmine.objectContaining({
+				content: 'test',
+			}),
+		}))
+	})
+
+	it('adds files in a directory', async () => {
+		await folder.update({
+			'dir\\test.txt': {
+				content: 'test',
+			},
+		})
+		const folderPath = atom.config.get('sync-settings-folder-location.folderPath')
+		const text = await fs.readFile(path.resolve(folderPath, './dir/test.txt'), { encoding: 'utf8' })
+		expect(text).toBe('test')
+	})
+
+	it('removes files in a directory', async () => {
+		const folderPath = atom.config.get('sync-settings-folder-location.folderPath')
+		const filePath = path.resolve(folderPath, './dir/test.txt')
+		await fs.outputFile(filePath, 'test')
+		await expectAsync(fs.pathExists(filePath)).toBeResolvedTo(true)
+		await folder.update({
+			'dir\\test.txt': {
+				content: '',
+			},
+		})
+		await expectAsync(fs.pathExists(filePath)).toBeResolvedTo(false)
+	})
+
 	it('creates a folder', async () => {
 		const newFolder = path.join(os.tmpdir(), `sync-settings-folder-${Math.random().toString(36).slice(2)}`)
 		atom.config.set('sync-settings-folder-location.folderPath', newFolder)

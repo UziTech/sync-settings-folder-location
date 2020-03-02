@@ -32,7 +32,7 @@
     "test": "atom --test ./spec",
     "lint": "eslint ."
   },
-  "atomTestRunner": "atom-jasmine3-test-runner",
+  "atomTestRunner": "./spec/runner",
   "providedServices": {
     "sync-settings-location": {
       "versions": {

@@ -24,13 +24,13 @@ jobs:
     - name: APM version
       run: apm -v
     - name: Install dependencies
-      run: apm ci
+      run: |
+        apm ci
+        apm install sync-settings
     - name: Run tests 👩🏾‍💻
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_PAT }}
-      run: |
-        apm i sync-settings
-        atom --test spec
+      run: atom --test spec
 
   Lint:
     if: "!contains(github.event.head_commit.message, '[skip ci]')"

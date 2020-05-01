@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/UziTech/sync-settings-folder-location/compare/v1.0.5...v1.0.6) (2020-05-01)
+
+
+### Bug Fixes
+
+* Get last modified time of files ([f2c3e61](https://github.com/UziTech/sync-settings-folder-location/commit/f2c3e614c7b2c19f9f0cdb36d5c4b003c898d0ed))
+
 ## [1.0.5](https://github.com/UziTech/sync-settings-folder-location/compare/v1.0.4...v1.0.5) (2020-04-23)
 
 

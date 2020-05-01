@@ -102,4 +102,37 @@ describe('folder', () => {
 		expect(atom.config.get('sync-settings-folder-location.folderPath')).toBe(newFolder)
 		expect(Object.keys(data.files).length).toBe(1)
 	})
+
+	it('updates time when file is added', async () => {
+		const data = await folder.get()
+		const originalTime = new Date(data.time)
+		const data2 = await folder.update({
+			'init.coffee': {
+				content: '# init',
+			},
+		})
+		expect(new Date(data2.time)).toBeGreaterThan(originalTime)
+	})
+
+	it('updates time when file is removed', async () => {
+		const data = await folder.get()
+		const originalTime = new Date(data.time)
+		const data2 = await folder.update({
+			README: {
+				content: '',
+			},
+		})
+		expect(new Date(data2.time)).toBeGreaterThan(originalTime)
+	})
+
+	it('updates time when file is modified', async () => {
+		const data = await folder.get()
+		const originalTime = new Date(data.time)
+		const data2 = await folder.update({
+			README: {
+				content: 'test',
+			},
+		})
+		expect(new Date(data2.time)).toBeGreaterThan(originalTime)
+	})
 })

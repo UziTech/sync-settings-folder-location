@@ -4,6 +4,10 @@ const fs = require('fs-extra')
 const folder = require('../lib/folder')
 const InputView = require('../lib/views/input-view')
 
+function sleep (ms = 0) {
+	return new Promise(resolve => setTimeout(resolve, ms))
+}
+
 describe('folder', () => {
 	beforeEach(async () => {
 		const folderPath = await fs.mkdtemp(path.join(os.tmpdir(), 'sync-settings-backup-'))
@@ -101,5 +105,41 @@ describe('folder', () => {
 		const data = await folder.get()
 		expect(atom.config.get('sync-settings-folder-location.folderPath')).toBe(newFolder)
 		expect(Object.keys(data.files).length).toBe(1)
+	})
+
+	it('updates time when file is added', async () => {
+		const data = await folder.get()
+		const originalTime = new Date(data.time)
+		await sleep(1000)
+		const data2 = await folder.update({
+			'init.coffee': {
+				content: '# init',
+			},
+		})
+		expect(new Date(data2.time)).toBeGreaterThan(originalTime)
+	})
+
+	it('updates time when file is removed', async () => {
+		const data = await folder.get()
+		const originalTime = new Date(data.time)
+		await sleep(1000)
+		const data2 = await folder.update({
+			README: {
+				content: '',
+			},
+		})
+		expect(new Date(data2.time)).toBeGreaterThan(originalTime)
+	})
+
+	it('updates time when file is modified', async () => {
+		const data = await folder.get()
+		const originalTime = new Date(data.time)
+		await sleep(1000)
+		const data2 = await folder.update({
+			README: {
+				content: 'test',
+			},
+		})
+		expect(new Date(data2.time)).toBeGreaterThan(originalTime)
 	})
 })

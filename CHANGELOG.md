@@ -1,3 +1,10 @@
+## [1.0.9](https://github.com/UziTech/sync-settings-folder-location/compare/v1.0.8...v1.0.9) (2020-06-28)
+
+
+### Bug Fixes
+
+* fix backup with subdirectory ([928b527](https://github.com/UziTech/sync-settings-folder-location/commit/928b52726003e321eb5c0609ce906384350e7058))
+
 ## [1.0.8](https://github.com/UziTech/sync-settings-folder-location/compare/v1.0.7...v1.0.8) (2020-06-04)
 
 

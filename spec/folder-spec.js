@@ -107,6 +107,18 @@ describe('folder', () => {
 		expect(Object.keys(data.files).length).toBe(1)
 	})
 
+	it('updates time when directory is added', async () => {
+		const data = await folder.get()
+		const originalTime = new Date(data.time)
+		await sleep(1000)
+		const data2 = await folder.update({
+			'dir\\test.txt': {
+				content: 'test',
+			},
+		})
+		expect(new Date(data2.time)).toBeGreaterThan(originalTime)
+	})
+
 	it('updates time when file is added', async () => {
 		const data = await folder.get()
 		const originalTime = new Date(data.time)

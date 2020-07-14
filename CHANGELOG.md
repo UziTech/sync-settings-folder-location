@@ -1,3 +1,10 @@
+## [1.0.10](https://github.com/UziTech/sync-settings-folder-location/compare/v1.0.9...v1.0.10) (2020-07-14)
+
+
+### Bug Fixes
+
+* **deps:** update dependency marked to ^1.1.1 ([c475a18](https://github.com/UziTech/sync-settings-folder-location/commit/c475a18e1e2599f6a6faa23ae216c4f7e46adaf2))
+
 ## [1.0.9](https://github.com/UziTech/sync-settings-folder-location/compare/v1.0.8...v1.0.9) (2020-06-28)
 
 

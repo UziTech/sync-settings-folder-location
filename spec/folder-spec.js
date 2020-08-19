@@ -2,7 +2,7 @@ const path = require('path')
 const os = require('os')
 const fs = require('fs-extra')
 const folder = require('../lib/folder')
-const InputView = require('../lib/views/input-view')
+const { InputView } = require('atom-modal-views')
 
 function sleep (ms = 0) {
 	return new Promise(resolve => setTimeout(resolve, ms))

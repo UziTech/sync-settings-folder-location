@@ -16,3 +16,11 @@ This is a service package for [Sync-Settings](https://atom.io/packages/sync-sett
 4. Check `Use Other Backup Location`.
 5. Run command `sync-settings:create-backup` to create the backup location.
 6. Run command `sync-settings:backup` to backup your settings.
+
+### How to sync to different folder paths on different machines
+
+To allow different folder paths on different machines with the same backup you will have to prevent the `sync-settings-folder-location.folderPath` setting from being included in the backup.
+
+1. Go to the `Sync-Settings` settings
+2. Enter `sync-settings-folder-location.folderPath` into the Blacklisted Keys setting
+   ![image](https://user-images.githubusercontent.com/97994/86014931-94e6ed00-b9e6-11ea-855e-d7a02a3b157e.png)

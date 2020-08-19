@@ -1,7 +1,7 @@
 {
   "name": "sync-settings-folder-location",
   "main": "./lib/main",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Sync-Settings backup to local folder.",
   "repository": {
     "type": "git",

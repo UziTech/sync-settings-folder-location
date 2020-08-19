@@ -1,3 +1,10 @@
+## [1.0.11](https://github.com/UziTech/sync-settings-folder-location/compare/v1.0.10...v1.0.11) (2020-08-19)
+
+
+### Bug Fixes
+
+* use atom-modal-views for input ([8e85142](https://github.com/UziTech/sync-settings-folder-location/commit/8e851422360be05df237c1cd21da43091b48f4dc))
+
 ## [1.0.10](https://github.com/UziTech/sync-settings-folder-location/compare/v1.0.9...v1.0.10) (2020-07-14)
 
 

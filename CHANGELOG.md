@@ -1,3 +1,10 @@
+## [1.0.14](https://github.com/UziTech/sync-settings-folder-location/compare/v1.0.13...v1.0.14) (2020-11-16)
+
+
+### Bug Fixes
+
+* **deps:** update dependency atom-modal-views to ^1.0.4 ([d3378cd](https://github.com/UziTech/sync-settings-folder-location/commit/d3378cd67a4e41f8a4d79438c4c9610575e0a546))
+
 ## [1.0.13](https://github.com/UziTech/sync-settings-folder-location/compare/v1.0.12...v1.0.13) (2020-09-28)
 
 

@@ -22,5 +22,6 @@ This is a service package for [Sync-Settings](https://atom.io/packages/sync-sett
 To allow different folder paths on different machines with the same backup you will have to prevent the `sync-settings-folder-location.folderPath` setting from being included in the backup.
 
 1. Go to the `Sync-Settings` settings
-2. Enter `sync-settings-folder-location.folderPath` into the Blacklisted Keys setting
-   ![image](https://user-images.githubusercontent.com/97994/86014931-94e6ed00-b9e6-11ea-855e-d7a02a3b157e.png)
+2. Enter `sync-settings-folder-location.folderPath` into the Disallowed Settings
+
+   ![image](https://user-images.githubusercontent.com/97994/135786391-d53ce46b-0cfe-41ad-bfbf-946dcc22f9a9.png)

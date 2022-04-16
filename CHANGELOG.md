@@ -1,3 +1,10 @@
+## [1.0.23](https://github.com/UziTech/sync-settings-folder-location/compare/v1.0.22...v1.0.23) (2022-04-16)
+
+
+### Bug Fixes
+
+* **deps:** update dependency fs-extra to ^10.1.0 ([#238](https://github.com/UziTech/sync-settings-folder-location/issues/238)) ([5c200bc](https://github.com/UziTech/sync-settings-folder-location/commit/5c200bc78b27b0a40ab59deeab219acc66adbd9f))
+
 ## [1.0.22](https://github.com/UziTech/sync-settings-folder-location/compare/v1.0.21...v1.0.22) (2022-03-12)
 
 

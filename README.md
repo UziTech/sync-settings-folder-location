@@ -25,3 +25,25 @@ To allow different folder paths on different machines with the same backup you w
 2. Enter `sync-settings-folder-location.folderPath` into the Disallowed Settings
 
    ![image](https://user-images.githubusercontent.com/97994/135786391-d53ce46b-0cfe-41ad-bfbf-946dcc22f9a9.png)
+
+### Manual Process for Configuring [Sync-Settings-folder-location]
+
+If the instructions in the Installation section don't work for some reason, do not despair! Rather, a manual edit of your config.cson file can add the support that you want. If you follow the above Installation instructions and an attempt to perform step 5 fails saying that you don't have a folder location configured, you can manually add it as follows.
+
+1. Choose `Edit -> Config...` to open your config.cson file.
+2. Look for the [Sync-Settings] section of the file which will have, at minimum, an entry used to enable [Sync-Settings-folder-location]. Something like this:
+`"sync-settings":
+  useOtherLocation: true`
+3. Add the following new stanza below that stanza to specify your local folder where you wish to save backups to sync:
+`"sync-settings-folder-location":
+  folderPath: "YOUR_OS_SPECIFIC_PATH"`
+
+For example, for a Linux user, your entry might look like this:
+
+`"sync-settings-folder-location":
+  folderPath: "/home/user/sync-settings-folder"`
+
+...or on Windows:
+
+`"sync-settings-folder-location":
+  folderPath: "C:\sync-settings-folder"`

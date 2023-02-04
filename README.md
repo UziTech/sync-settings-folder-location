@@ -36,15 +36,15 @@ If the instructions in the Installation section don't work for some reason, do n
   useOtherLocation: true`
 3. Add the following new stanza below that stanza to specify your local folder where you wish to save backups to sync:
 
-`"sync-settings-folder-location":
-  folderPath: "YOUR_OS_SPECIFIC_PATH"`
+   "sync-settings-folder-location":
+        folderPath: "YOUR_OS_SPECIFIC_PATH"
 
 For example, for a Linux user, your entry might look like this:
 
-`"sync-settings-folder-location":
-  folderPath: "/home/user/sync-settings-folder"`
+    "sync-settings-folder-location":
+        folderPath: "/home/user/sync-settings-folder"
 
 ...or on Windows:
 
-`"sync-settings-folder-location":
-  folderPath: "C:\sync-settings-folder"`
+    "sync-settings-folder-location":
+        folderPath: "C:\sync-settings-folder"

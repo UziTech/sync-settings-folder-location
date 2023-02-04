@@ -32,20 +32,22 @@ If the instructions in the Installation section don't work for some reason, do n
 
 1. Choose `Edit -> Config...` to open your config.cson file.
 2. Look for the `sync-settings` section of the file which will have, at minimum, an entry used to enable `Sync-Settings-folder-location`. Something like this:
-`"sync-settings":
-  useOtherLocation: true`
+~~~
+"sync-settings":
+    useOtherLocation: true
+~~~
 3. Add the following new stanza below that stanza to specify your local folder where you wish to save backups to sync:
 ~~~
-    "sync-settings-folder-location":
-        folderPath: "YOUR_OS_SPECIFIC_PATH"
+"sync-settings-folder-location":
+    folderPath: "YOUR_OS_SPECIFIC_PATH"
 ~~~
 For example, for a Linux user, your entry might look like this:
 ~~~
-    "sync-settings-folder-location":
-        folderPath: "/home/user/sync-settings-folder"
+"sync-settings-folder-location":
+    folderPath: "/home/user/sync-settings-folder"
 ~~~
 ...or on Windows:
 ~~~
-    "sync-settings-folder-location":
-        folderPath: "C:\sync-settings-folder"
+"sync-settings-folder-location":
+    folderPath: "C:\sync-settings-folder"
 ~~~

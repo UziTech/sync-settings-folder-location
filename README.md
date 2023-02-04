@@ -31,7 +31,7 @@ To allow different folder paths on different machines with the same backup you w
 If the instructions in the Installation section don't work for some reason, do not despair! Rather, a manual edit of your config.cson file can add the support that you want. If you follow the above Installation instructions and an attempt to perform step 5 fails saying that you don't have a folder location configured, you can manually add it as follows.
 
 1. Choose `Edit -> Config...` to open your config.cson file.
-2. Look for the [Sync-Settings] section of the file which will have, at minimum, an entry used to enable [Sync-Settings-folder-location]. Something like this:
+2. Look for the `sync-settings` section of the file which will have, at minimum, an entry used to enable `Sync-Settings-folder-location`. Something like this:
 `"sync-settings":
   useOtherLocation: true`
 3. Add the following new stanza below that stanza to specify your local folder where you wish to save backups to sync:

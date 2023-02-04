@@ -26,7 +26,7 @@ To allow different folder paths on different machines with the same backup you w
 
    ![image](https://user-images.githubusercontent.com/97994/135786391-d53ce46b-0cfe-41ad-bfbf-946dcc22f9a9.png)
 
-### Manual Process for Configuring [Sync-Settings-folder-location]
+### Manual Process for Configuring [Sync-Settings-folder-location](https://github.com/UziTech/sync-settings-folder-location)
 
 If the instructions in the Installation section don't work for some reason, do not despair! Rather, a manual edit of your config.cson file can add the support that you want. If you follow the above Installation instructions and an attempt to perform step 5 fails saying that you don't have a folder location configured, you can manually add it as follows.
 
